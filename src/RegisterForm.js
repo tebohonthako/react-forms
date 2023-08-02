@@ -1,7 +1,9 @@
 //  C O N T R O L L E D     I N P U T S 
  import React, {useState} from 'react';
  
+// our functional component 
  function RegisterForm () {
+    // adding state to our functional component | state = behavior added to component 
     const [name, setName] = useState('');
     const [lastname, setLastName] = useState('');
     const [Username, setUsername] = useState('');
@@ -9,11 +11,13 @@
     const [password, setPassword] = useState('');
     const [bio, setBio] = useState('');
 
+
+    // JSX - rendering what we see on the screen 
     return (
         <div>
             <form>
                 <label>Name * </label>
-                <input type="text" required placeholder="First Name" value={name}></input>
+                <input type="text" required placeholder="First Name" value={name} onChange={(e) => setName(e.target.value)}></input>
                 <input type="text" required placeholder="Last Name" value={lastname}></input>
 
                 <label>Username * </label>
